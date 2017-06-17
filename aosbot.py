@@ -1,0 +1,33 @@
+import logging
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+
+def generate_error_response(error, error_code=400, error_message=""):
+    error_message = {
+        "error": error,
+        "error_code": error_code,
+        "error_message": error_message,
+    }
+    return error_message
+
+
+def telegram_webhook_handler(event: dict, context: dict) -> dict:
+    """ This function process the endpoint for the webhook handler """
+
+    if not isinstance(event, dict):
+        # Telegram objects are JSON objects so we are only receiving dicts
+        # Any other input type supported by Lambda has no sense here
+        logger.error("BAD REQUEST: %s", event)
+        return generate_error_response("Bad request.", 400, "Bad input type")
+
+    logger.info("REQUEST: %s", event)
+
+    response = {}
+    logger.info("RESPONSE: %s", response)
+    return response
+
+
+def send_message_to_conference_group(event, context):
+    pass
