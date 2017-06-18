@@ -1,9 +1,17 @@
 import logging
+import os
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 from tg.update_handler import UpdateHandler
+
+
+config = {
+    "bot_api_token": os.getenv("BOT_API_TOKEN", "FAKE:TOKEN"),
+    "bot_username": os.getenv("BOT_USERNAME", "AOSBot"),
+    "webhook_url": os.getenv("WEBHOOK_URL", "https://your.bot/webhook/path"),
+}
 
 
 def generate_error_response(error, error_code=400, error_message=""):
