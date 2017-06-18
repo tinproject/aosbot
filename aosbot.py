@@ -1,10 +1,15 @@
 import logging
 import os
+import re
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-from tg.update_handler import UpdateHandler
+from tg.update_handler import UpdateHandler  # NoQA E402
+from tg.api_types import Message
+
+
+COMMAND_BOT_REGEX = r"^/(?P<command>[a-zA-Z0-9_]{1,31})(?:@(?P<bot_username>[a-zA-Z0-9_]{5,32}))?"
 
 
 config = {
@@ -23,12 +28,77 @@ def generate_error_response(error, error_code=400, error_message=""):
     return error_message
 
 
-def not_implemented_handler(message):
+def send_message_in_response(chat_id, text,
+                             parse_mode="Markdown",
+                             disable_web_page_preview=True,
+                             disable_notification=False,
+                             reply_to_message_id=None,
+                             ):
+    response = {
+        "method": "sendMessage",
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": parse_mode,
+        "disable_web_page_preview": disable_web_page_preview,
+        "disable_notification": disable_notification,
+    }
+    if reply_to_message_id is not None:
+        response["reply_to_message_id"] = reply_to_message_id
+    return response
+
+
+def not_implemented_handler(message_dict):
     return generate_error_response("NOT IMPLEMENTED", 500)
 
 
+def command_handler_start(Message):
+    return """
+    This is a placeholder message for */starr* command.
+    """
+
+
+def command_handler_help(Message):
+    return """
+    This is a placeholder message for */starr* command.
+    """
+
+
+COMMAND_HANDLERS = {
+    "start": command_handler_start,
+    "help": command_handler_help,
+    "ayuda": command_handler_help,
+    "ahora": not_implemented_handler,
+    "siguientes": not_implemented_handler,
+    "programa": not_implemented_handler,
+}
+
+
+def message_handler(message_dict):
+    message = Message(message_dict)
+
+    # Is a command?
+    if str.startswith(message.text, '/'):
+        command, at_bot = re.match(COMMAND_BOT_REGEX, message.text).groups()
+        if at_bot is not None and at_bot != config["bot_username"]:
+            # Commmand for ohter bot
+            return generate_error_response("NOT PROCESSED", 200, f"Command for other bot {at_bot}")
+        else:
+            if message.chat.type != "private":
+                # Not asnwer to messages from groups/supergroups/channels
+                return generate_error_response("NOT PROCESSED", 200, f"Only answer in private")
+
+            # Process command
+            if command not in COMMAND_HANDLERS:
+                return generate_error_response("NOT PROCESSED", 200, f"Command not understanded {command}")
+            response_text = COMMAND_HANDLERS[command](message)
+            return send_message_in_response(message.chat.id, response_text)
+
+    # It'a a message to the bot.
+    return generate_error_response("NOT PROCESSED", 200, f"Not processing messages")
+
+
 update_handler = UpdateHandler(
-    message=not_implemented_handler,
+    message=message_handler,
     edited_message=not_implemented_handler,
     channel_post=not_implemented_handler,
     edited_channel_post=not_implemented_handler,

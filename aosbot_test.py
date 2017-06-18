@@ -32,11 +32,18 @@ def update():
 class TestMessageUpdates:
     @pytest.fixture()
     def message(self, update):
-        payload = {}
+        payload = {"message_id": 39,
+                   "from": {"id": 28589437, "first_name": "A",
+                            "username": "tinproject", "language_code": "es"},
+                   "chat": {"id": 28589437, "first_name": "A",
+                            "username": "tinproject", "type": "private"},
+                   "date": 1497798450,
+                   "text": "/start@tinprojectTestBot",
+                   "entities": [{"type": "bot_command", "offset": 0, "length": 23}]}
         return update("message", payload)
 
-    def test_message_update_not_implemented(self, bot, message):
-        assert bot(message)["error"] == NOT_IMPLEMENTED
+    def test_message_update_implemented(self, bot, message):
+        assert bot(message)
 
 
 class TestEditedMessageUpdates:
