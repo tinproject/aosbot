@@ -41,7 +41,8 @@ def test_user():
 
 
 def test_chat():
-    chat_dict = {"id": 4545, "type": "private", "first_name": "Pepito", "last_name": "Pérez", "username": "pepe"}
+    chat_dict = {"id": 4545, "type": "private", "first_name": "Pepito",
+                 "last_name": "Pérez", "username": "pepe"}
     chat = Chat(chat_dict)
     assert chat.id == 4545
     assert chat.title == ""

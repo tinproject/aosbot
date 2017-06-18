@@ -5,8 +5,8 @@ import re
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-from tg.update_handler import UpdateHandler  # NoQA E402
-from tg.api_types import Message
+from .tg.update_handler import UpdateHandler  # NoQA E402
+from .tg.api_types import Message  # NoQA E402
 
 
 COMMAND_BOT_REGEX = r"^/(?P<command>[a-zA-Z0-9_]{1,31})(?:@(?P<bot_username>[a-zA-Z0-9_]{5,32}))?"
@@ -53,13 +53,13 @@ def not_implemented_handler(message_dict):
 
 def command_handler_start(Message):
     return """
-    This is a placeholder message for */starr* command.
+    This is a placeholder message for */start* command.
     """
 
 
 def command_handler_help(Message):
     return """
-    This is a placeholder message for */starr* command.
+    This is a placeholder message for */help* command.
     """
 
 
@@ -89,7 +89,8 @@ def message_handler(message_dict):
 
             # Process command
             if command not in COMMAND_HANDLERS:
-                return generate_error_response("NOT PROCESSED", 200, f"Command not understanded {command}")
+                return generate_error_response("NOT PROCESSED", 200,
+                                               f"Command not understanded {command}")
             response_text = COMMAND_HANDLERS[command](message)
             return send_message_in_response(message.chat.id, response_text)
 
