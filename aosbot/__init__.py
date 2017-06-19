@@ -1,3 +1,4 @@
+import datetime as dt
 import logging
 import re
 
@@ -7,6 +8,7 @@ logger.setLevel(logging.INFO)
 from .tg.update_handler import UpdateHandler  # NoQA E402
 from .tg.api_types import Message  # NoQA E402
 from . import config  # NoQA E402
+from .talks import talks_data  # NoQA E402
 
 
 COMMAND_BOT_REGEX = r"^/(?P<command>[a-zA-Z0-9_]{1,31})(?:@(?P<bot_username>[a-zA-Z0-9_]{5,32}))?"
@@ -56,13 +58,43 @@ def command_handler_help(Message):
     """
 
 
+def command_handler_ahora(Message):
+    now = dt.datetime.now(dt.timezone.utc)
+    talks = [t for t in talks_data if t.is_now(now)]
+    if talks:
+        response = "\n".join((str(t) for t in talks))
+    else:
+        response = f"Ahora mismo no hay ninguna charla."
+    return response
+
+
+def command_handler_siguientes(Message):
+    now = dt.datetime.now(dt.timezone.utc)
+    talks = [t for t in talks_data if t.is_upcoming(now)]
+    if talks:
+        response = "\n".join((str(t) for t in sorted(talks)))
+    else:
+        response = f"Ahora mismo no hay ninguna charla."
+    return response
+
+
+def command_handler_programa(Message):
+    now = dt.datetime.now(dt.timezone.utc)
+    talks = [t for t in talks_data if not t.is_passed(now)]
+    if talks:
+        response = "\n".join((str(t) for t in sorted(talks)))
+    else:
+        response = f"Ahora mismo no hay ninguna charla en el programa."
+    return response
+
+
 COMMAND_HANDLERS = {
     "start": command_handler_start,
     "help": command_handler_help,
     "ayuda": command_handler_help,
-    "ahora": not_implemented_handler,
-    "siguientes": not_implemented_handler,
-    "programa": not_implemented_handler,
+    "ahora": command_handler_ahora,
+    "siguientes": command_handler_siguientes,
+    "programa": command_handler_programa,
 }
 
 

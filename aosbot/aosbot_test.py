@@ -67,6 +67,18 @@ class TestMessageUpdates:
         text_response = text_message_response_from_private_chat("/help")
         assert "placeholder" in text_response
 
+    def test_ahora_command(self, text_message_response_from_private_chat):
+        text_response = text_message_response_from_private_chat("/ahora")
+        assert text_response != ""
+
+    def test_siguientes_command(self, text_message_response_from_private_chat):
+        text_response = text_message_response_from_private_chat("/siguientes")
+        assert text_response != ""
+
+    def test_programa_command(self, text_message_response_from_private_chat):
+        text_response = text_message_response_from_private_chat("/programa")
+        assert text_response != ""
+
 
 class TestEditedMessageUpdates:
     @pytest.fixture()

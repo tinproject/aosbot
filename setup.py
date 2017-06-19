@@ -13,5 +13,5 @@ setup(
     classifiers=[
         "Dumb :: Do Not Upload"
     ],
-    install_requires=[]
+    install_requires=['pyyaml', 'python-dateutil']
 )
