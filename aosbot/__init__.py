@@ -1,5 +1,4 @@
 import logging
-import os
 import re
 
 logger = logging.getLogger()
@@ -7,16 +6,10 @@ logger.setLevel(logging.INFO)
 
 from .tg.update_handler import UpdateHandler  # NoQA E402
 from .tg.api_types import Message  # NoQA E402
+from . import config  # NoQA E402
 
 
 COMMAND_BOT_REGEX = r"^/(?P<command>[a-zA-Z0-9_]{1,31})(?:@(?P<bot_username>[a-zA-Z0-9_]{5,32}))?"
-
-
-config = {
-    "bot_api_token": os.getenv("BOT_API_TOKEN", "FAKE:TOKEN"),
-    "bot_username": os.getenv("BOT_USERNAME", "AOSBot"),
-    "webhook_url": os.getenv("WEBHOOK_URL", "https://your.bot/webhook/path"),
-}
 
 
 def generate_error_response(error, error_code=400, error_message=""):
@@ -79,7 +72,7 @@ def message_handler(message_dict):
     # Is a command?
     if str.startswith(message.text, '/'):
         command, at_bot = re.match(COMMAND_BOT_REGEX, message.text).groups()
-        if at_bot is not None and at_bot != config["bot_username"]:
+        if at_bot is not None and at_bot != config.BOT_USERNAME:
             # Commmand for ohter bot
             return generate_error_response("NOT PROCESSED", 200, f"Command for other bot {at_bot}")
         else:

@@ -30,20 +30,42 @@ def update():
 
 
 class TestMessageUpdates:
-    @pytest.fixture()
-    def message(self, update):
-        payload = {"message_id": 39,
-                   "from": {"id": 28589437, "first_name": "A",
-                            "username": "tinproject", "language_code": "es"},
-                   "chat": {"id": 28589437, "first_name": "A",
-                            "username": "tinproject", "type": "private"},
-                   "date": 1497798450,
-                   "text": "/start@tinprojectTestBot",
-                   "entities": [{"type": "bot_command", "offset": 0, "length": 23}]}
-        return update("message", payload)
+    FROM_USER = {"id": 42, "first_name": "A", "username": "tinproject", "language_code": "es"}
+    PRIVATE_CHAT = {"id": 42, "first_name": "A", "username": "tinproject", "type": "private"}
 
-    def test_message_update_implemented(self, bot, message):
-        assert bot(message)
+    @pytest.fixture()
+    def text_message(self, update):
+        def get_message_payload(text, from_user=self.FROM_USER, chat=self.PRIVATE_CHAT):
+            message = {"message_id": 1,
+                       "from": from_user,
+                       "chat": chat,
+                       "date": 1497790000,
+                       "text": text,
+                       }
+            return update("message", message)
+        return get_message_payload
+
+    def test_message_update_implemented(self, bot, text_message):
+        message = text_message("Hola")
+        response = bot(message)
+        assert "error" not in response or response["error"] != "NOT IMPLEMENTED"
+
+    @pytest.fixture()
+    def text_message_response_from_private_chat(self, bot, text_message):
+        def get_text_message_response_from_private_chat(text):
+            message = text_message(text, self.FROM_USER, self.PRIVATE_CHAT)
+            response = bot(message)
+            assert response["method"] == "sendMessage", "The response must be a sendMessage method."
+            return response["text"]
+        return get_text_message_response_from_private_chat
+
+    def test_start_command(self, text_message_response_from_private_chat):
+        text_response = text_message_response_from_private_chat("/start")
+        assert "placeholder" in text_response
+
+    def test_help_command(self, text_message_response_from_private_chat):
+        text_response = text_message_response_from_private_chat("/help")
+        assert "placeholder" in text_response
 
 
 class TestEditedMessageUpdates:
