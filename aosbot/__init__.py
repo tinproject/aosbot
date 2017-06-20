@@ -49,11 +49,11 @@ def not_implemented_handler(message_dict):
 def command_handler_start(Message):
     return "\n".join([
         f"Hola, soy *{config.BOT_NAME}* y estoy aquí para ayudarte a que "
-        "no te pierdas ninguna sesión interesante del AOS 2017 en Segovia.",
-        "Soy un bot muy _funcional_ y _carezco de estado_. Como no tengo memoria, "
-        "solo puedo responderte más cosas para las que me han programado. "
-        "Puedes ver mis tripas en [Github](https://github.com/tinproject/aosbot).",
-        "Si quieres algo de mí, has de hablarme mediante comandos, por ejemplo, "
+        "no te pierdas ninguna sesión que te interesa del AOS 2017 en Segovia.",
+        "Soy un bot muy _funcional_ y _carezco de estado_, como no tengo memoria "
+        "solo puedo responderte las cosas para las que me han programado. "
+        "Si quieres, puedes ver mis tripas en [Github](https://github.com/tinproject/aosbot).",
+        "Para que te de información, has de hablarme mediante comandos. Por ejemplo, "
         "si me pides */ayuda* te dire cual es el listado de comandos disponibles.",
     ])
 
@@ -80,7 +80,7 @@ def command_handler_ahora(Message):
 
 def command_handler_siguientes(Message):
     now = dt.datetime.now(dt.timezone.utc)
-    talks = [t for t in talks_data if t.is_upcoming(now)]
+    talks = [t for t in talks_data if t.is_upcoming(now) and t.is_talk()]
     if talks:
         response = "\n".join((str(t) for t in sorted(talks)))
     else:
@@ -89,8 +89,7 @@ def command_handler_siguientes(Message):
 
 
 def command_handler_programa(Message):
-    now = dt.datetime.now(dt.timezone.utc)
-    talks = [t for t in talks_data if not t.is_passed(now)]
+    talks = [t for t in talks_data]
     if talks:
         response = "\n".join((str(t) for t in sorted(talks)))
     else:

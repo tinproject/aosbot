@@ -6,41 +6,44 @@ talks_data = yaml.safe_load("""
 ---
 
 talks:
-  - from_time: "2017-06-20T10:00:00+0200"
+  - session_type: session
+    from_time: "2017-06-20T10:00:00+0200"
     to_time: "2017-06-20T11:00:00+0200"
     room: Auditorio
     title: Charla número 1
     description: |
         Esta charla
         es una charla de prueba
-  - from_time: "2017-06-20T10:00:00+0200"
+  - session_type: session
+    from_time: "2017-06-20T10:00:00+0200"
     to_time: "2017-06-20T11:00:00+0200"
     room: Aula
     title: Charla número 2
     description: |
         Esta charla
         es una charla de prueba
-  - from_time: "2017-06-20T11:00:00+0200"
+  - session_type: session
+    from_time: "2017-06-20T11:00:00+0200"
     to_time: "2017-06-20T12:00:00+0200"
     room: Auditorio
     title: Charla número 3
     description: |
         Esta charla
         es una charla de prueba
-
-  - from_time: "2017-06-20T11:00:00+0200"
+  - session_type: session
+    from_time: "2017-06-20T11:00:00+0200"
     to_time: "2017-06-20T12:00:00+0200"
     room: Aula
     title: Charla número 4
     description: |
         Esta charla
         es una charla de prueba
-
 """)
 
 
 class Talk:
-    def __init__(self,from_time, to_time, room, title, description):
+    def __init__(self, session_type, from_time, to_time, room, title, description):
+        self.session_type = session_type
         self.from_time = dateutil.parser.parse(from_time)
         self.to_time = dateutil.parser.parse(to_time)
         self.room = room
@@ -55,6 +58,12 @@ class Talk:
 
     def is_upcoming(self, time):
         return self.from_time >= time
+
+    def is_talk(self):
+        return self.session_type == "session"
+
+    def is_break(self):
+        return self.session_type == "break"
 
     def __lt__(self, other):
         if self.from_time == other.from_time:

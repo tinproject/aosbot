@@ -61,11 +61,11 @@ class TestMessageUpdates:
 
     def test_start_command(self, text_message_response_from_private_chat):
         text_response = text_message_response_from_private_chat("/start")
-        assert "placeholder" in text_response
+        assert "Hola" in text_response
 
     def test_help_command(self, text_message_response_from_private_chat):
         text_response = text_message_response_from_private_chat("/help")
-        assert "placeholder" in text_response
+        assert "ayuda" in text_response
 
     def test_ahora_command(self, text_message_response_from_private_chat):
         text_response = text_message_response_from_private_chat("/ahora")
@@ -77,7 +77,12 @@ class TestMessageUpdates:
 
     def test_programa_command(self, text_message_response_from_private_chat):
         text_response = text_message_response_from_private_chat("/programa")
-        assert text_response != ""
+        assert "Aula" in text_response
+
+    def test_talks_load(self):
+        from .talks import talks_data
+        assert talks_data
+        assert len(talks_data) > 0
 
 
 class TestEditedMessageUpdates:
