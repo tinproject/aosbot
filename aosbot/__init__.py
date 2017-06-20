@@ -47,15 +47,25 @@ def not_implemented_handler(message_dict):
 
 
 def command_handler_start(Message):
-    return """
-    This is a placeholder message for */start* command.
-    """
+    return "\n".join([
+        f"Hola, soy *{config.BOT_NAME}* y estoy aquí para ayudarte a que "
+        "no te pierdas ninguna sesión interesante del AOS 2017 en Segovia.",
+        "Soy un bot muy _funcional_ y _carezco de estado_. Como no tengo memoria, "
+        "solo puedo responderte más cosas para las que me han programado. "
+        "Puedes ver mis tripas en [Github](https://github.com/tinproject/aosbot).",
+        "Si quieres algo de mí, has de hablarme mediante comandos, por ejemplo, "
+        "si me pides */ayuda* te dire cual es el listado de comandos disponibles.",
+    ])
 
 
 def command_handler_help(Message):
-    return """
-    This is a placeholder message for */help* command.
-    """
+    return "\n".join([
+        "Estos son los comandos a los que respondo:",
+        "*/ayuda* - Esta ayuda es que estás leyendo.",
+        "*/ahora* - Te cuento las sesiones que hay en este mismo instante.",
+        "*/siguientes* - Las que empezarán dentro de un rato.",
+        "*/programa* - Todas las sesiones que hay programadas."
+    ])
 
 
 def command_handler_ahora(Message):
@@ -108,8 +118,8 @@ def message_handler(message_dict):
             # Commmand for ohter bot
             return generate_error_response("NOT PROCESSED", 200, f"Command for other bot {at_bot}")
         else:
-            if message.chat.type != "private":
-                # Not asnwer to messages from groups/supergroups/channels
+            if message.chat.type == "channels":
+                # Not asnwer to messages from channels
                 return generate_error_response("NOT PROCESSED", 200, f"Only answer in private")
 
             # Process command
