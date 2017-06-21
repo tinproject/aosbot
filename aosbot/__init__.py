@@ -8,7 +8,7 @@ logger.setLevel(logging.INFO)
 from .tg.update_handler import UpdateHandler  # NoQA E402
 from .tg.api_types import Message  # NoQA E402
 from . import config  # NoQA E402
-from .talks import talks_data  # NoQA E402
+from .talks import talk_manager  # NoQA E402
 
 
 COMMAND_BOT_REGEX = r"^/(?P<command>[a-zA-Z0-9_]{1,31})(?:@(?P<bot_username>[a-zA-Z0-9_]{5,32}))?"
@@ -70,7 +70,7 @@ def command_handler_help(Message):
 
 def command_handler_ahora(Message):
     now = dt.datetime.now(dt.timezone.utc)
-    talks = [t for t in talks_data if t.is_now(now)]
+    talks = talk_manager.get_now_talks(now)
     if talks:
         response = "\n".join((str(t) for t in talks))
     else:
@@ -80,7 +80,7 @@ def command_handler_ahora(Message):
 
 def command_handler_siguientes(Message):
     now = dt.datetime.now(dt.timezone.utc)
-    talks = [t for t in talks_data if t.is_upcoming(now) and t.is_talk()]
+    talks = talk_manager.get_next_talks(now)
     if talks:
         response = "\n".join((str(t) for t in sorted(talks)))
     else:
@@ -89,7 +89,7 @@ def command_handler_siguientes(Message):
 
 
 def command_handler_programa(Message):
-    talks = [t for t in talks_data]
+    talks = talk_manager.get_all_talks()
     if talks:
         response = "\n".join((str(t) for t in sorted(talks)))
     else:

@@ -11,6 +11,7 @@ talks:
     to_time: "2017-06-20T11:00:00+0200"
     room: Auditorio
     title: Charla número 1
+    proposer: Fulanito de Tal
     description: |
         Esta charla
         es una charla de prueba
@@ -19,6 +20,7 @@ talks:
     to_time: "2017-06-20T11:00:00+0200"
     room: Aula
     title: Charla número 2
+    proposer: Menganito de Cual
     description: |
         Esta charla
         es una charla de prueba
@@ -26,6 +28,7 @@ talks:
     from_time: "2017-06-20T11:00:00+0200"
     to_time: "2017-06-20T12:00:00+0200"
     room: Auditorio
+    proposer: Menganito de Cual
     title: Charla número 3
     description: |
         Esta charla
@@ -34,6 +37,7 @@ talks:
     from_time: "2017-06-20T11:00:00+0200"
     to_time: "2017-06-20T12:00:00+0200"
     room: Aula
+    proposer: Fulanito de Tal
     title: Charla número 4
     description: |
         Esta charla
@@ -42,12 +46,13 @@ talks:
 
 
 class Talk:
-    def __init__(self, session_type, from_time, to_time, room, title, description):
+    def __init__(self, session_type, from_time, to_time, room, title, proposer, description):
         self.session_type = session_type
         self.from_time = dateutil.parser.parse(from_time)
         self.to_time = dateutil.parser.parse(to_time)
         self.room = room
         self.title = title
+        self.proposer = proposer
         self.description = description
 
     def is_now(self, time):
@@ -75,8 +80,23 @@ class Talk:
         return "\n".join([
             f"*·* {self.from_time:%H:%M}-{self.to_time:%H:%M} _{self.room}_",
             f"*{self.title}*",
+            f"Propuesta por: {self.proposer}"
             f"{self.description}",
         ])
 
 
-talks_data = [Talk(**t) for t in talks_data["talks"]]
+class TalkManager:
+    def __init__(self, talks_data):
+        self.talks = [Talk(**t) for t in talks_data["talks"]]
+
+    def get_now_talks(self, time):
+        return [t for t in self.talks if t.is_now(time)]
+
+    def get_next_talks(self, time):
+        return [t for t in self.talks if t.is_upcoming(time) and t.is_talk()]
+
+    def get_all_talks(self):
+        return self.talks
+
+
+talk_manager = TalkManager(talks_data)
