@@ -4,6 +4,13 @@ import yaml
 
 # Talk types: session, general, break, extra
 
+# emoji: :coffee::alarm_clock::watch::hourglass_flowing_sand:
+# :calendar::fork_and_knife::raising_hand::footprints:
+# :speech_balloon::thought_balloon:
+# :pig::pig_nose::ghost::gift:
+# :closed_book::blue_book::orange_book::notebook::space_invader:
+
+
 talks_data = yaml.safe_load("""
 ---
 
@@ -176,12 +183,30 @@ class Talk:
             return self.from_time <= other.from_time
 
     def __str__(self):
-        return "\n".join([
-            f"*·* {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
-            f"*{self.title}*",
-            f"Propuesta por: {self.proposer}"
-            f"{self.description}",
-        ])
+        text = {
+            "break": "\n".join([
+                f":coffee: {self.from_time:%H:%M} - {self.to_time:%H:%M}",
+                f"*{self.title}*",
+            ]),
+            "extra": "\n".join([
+                f":pig_nose: {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
+                f"*{self.title}*",
+                f"Facilitada por: {self.proposer}"
+                f"{self.description}",
+            ]),
+            "general": "\n".join([
+                f":raising_hand: {self.from_time:%H:%M} - {self.to_time:%H:%M}",
+                f"*{self.title}*",
+                f"{self.description}",
+            ]),
+            "session": "\n".join([
+                f":calendar: {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
+                f"*{self.title}*",
+                f"Propuesta por: {self.proposer}"
+            ]),
+        }
+
+        return text[self.session_type]
 
 
 class TalkManager:
