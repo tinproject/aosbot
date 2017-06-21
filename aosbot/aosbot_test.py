@@ -76,7 +76,7 @@ class TestMessageUpdates:
         assert text_response != ""
 
     def test_programa_command(self, text_message_response_from_private_chat):
-        text_response = text_message_response_from_private_chat("/programa")
+        text_response = text_message_response_from_private_chat("/agenda")
         assert "Aula" in text_response
 
     def test_talks_load(self):

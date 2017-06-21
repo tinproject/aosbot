@@ -64,7 +64,7 @@ def command_handler_help(Message):
         "*/ayuda* - Esta ayuda es que estás leyendo.",
         "*/ahora* - Te cuento las sesiones que hay en este mismo instante.",
         "*/siguientes* - Las que empezarán dentro de un rato.",
-        "*/programa* - Todas las sesiones que hay programadas."
+        "*/agenda* - Todas las sesiones que hay en la agenda."
     ])
 
 
@@ -103,7 +103,7 @@ COMMAND_HANDLERS = {
     "ayuda": command_handler_help,
     "ahora": command_handler_ahora,
     "siguientes": command_handler_siguientes,
-    "programa": command_handler_programa,
+    "agenda": command_handler_programa,
 }
 
 
