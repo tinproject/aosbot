@@ -1,13 +1,14 @@
 import dateutil.parser
-from .talks_data import talks_data
+from .talks_data import talks_data, get_emoji
 
 
 class Talk:
-    def __init__(self, session_type, from_time, to_time, room, title, proposer, description):
+    def __init__(self, session_type, from_time, to_time, room, icon, title, proposer, description):
         self.session_type = session_type
         self.from_time = dateutil.parser.parse(from_time)
         self.to_time = dateutil.parser.parse(to_time)
         self.room = room
+        self.icon = icon
         self.title = title
         self.proposer = proposer
         self.description = description
@@ -36,22 +37,22 @@ class Talk:
     def __str__(self):
         text = {
             "break": "\n".join([
-                f":coffee: {self.from_time:%H:%M} - {self.to_time:%H:%M}",
+                f"{get_emoji(self.icon)} {self.from_time:%H:%M} - {self.to_time:%H:%M}",
                 f"*{self.title}*",
             ]),
             "extra": "\n".join([
-                f":pig_nose: {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
+                f"{get_emoji(self.icon)} {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
                 f"*{self.title}*",
-                f"Facilitada por: {self.proposer}"
+                f"Facilitada por: {self.proposer}",
                 f"{self.description}",
             ]),
             "general": "\n".join([
-                f":raising_hand: {self.from_time:%H:%M} - {self.to_time:%H:%M}",
+                f"{get_emoji(self.icon)} {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
                 f"*{self.title}*",
                 f"{self.description}",
             ]),
             "session": "\n".join([
-                f":calendar: {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
+                f"{get_emoji(self.icon)} {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
                 f"*{self.title}*",
                 f"Propuesta por: {self.proposer}"
             ]),
