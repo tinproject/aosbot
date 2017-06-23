@@ -131,7 +131,7 @@ talks:
     to_time: "2017-06-24T11:00:00+0200"
     room: Thinking with you
     icon: thinking
-    title: Empresas de servicios ¿Qué vedemos en un proyecto Agile?
+    title: Empresas de servicios, ¿Qué vendemos en un proyecto Agile?
     proposer: Sergio Fernández
     description: ...
   - session_type: session
@@ -139,7 +139,7 @@ talks:
     to_time: "2017-06-24T11:00:00+0200"
     room: Deiser
     icon: deiser
-    title: Equipos multidisciplinares vs. departamentos.
+    title: Equipos multidisciplinares vs. departamentos
     proposer: Jordi Gómez
     description: ...
   - session_type: session
@@ -148,7 +148,7 @@ talks:
     room: UST Global
     icon: ust_global
     title: La interminable historia de las priorizaciones
-    proposer: "@rquel_leroes y @ josep_ruidavets"
+    proposer: "@rquel_lerones y @josep_riudavets"
     description: 
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
@@ -156,14 +156,14 @@ talks:
     room: Jerónimo Palacios
     icon: jeronimo_palacios
     title: Devops! ¿Cómo lo lleváis?
-    proposer: "@leadmurillo"
+    proposer: "@leodmurillo"
     description: ...
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
     to_time: "2017-06-24T11:00:00+0200"
     room: Agile Spain
     icon: agile_spain
-    title: Parallel Change (Como hacer cambios grandes en pasos pequeños)
+    title: Parallel Change (Cómo hacer cambios grandes en pasos pequeños)
     proposer: "@eferro"
     description: ...
   - session_type: session
@@ -180,7 +180,7 @@ talks:
     to_time: "2017-06-24T12:00:00+0200"
     room: Thinking with you
     icon: thinking
-    title: "#MakeMeHappyatWork"
+    title: "#MakeMeHappyAtWork"
     proposer: "Susana Morcuende @yosoytumadre"
     description: ...
   - session_type: session
@@ -189,14 +189,14 @@ talks:
     room: Deiser
     icon: deiser
     title: Como combatir el efecto Pokémon.
-    proposer: "Javier Martínex @lasdelpulpo"
+    proposer: "Javier Martínez @lasdelpulpo"
     description: ...
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
     room: UST Global
     icon: ust_global
-    title: ¡ARGOS! Creando un universo de productos.
+    title: Después de Nexus, Less, SAFE... ¡ARGOS! Creando un universo de productos
     proposer: Alberto Serrano
     description: 
   - session_type: session
@@ -212,7 +212,7 @@ talks:
     to_time: "2017-06-24T12:00:00+0200"
     room: Agile Spain
     icon: agile_spain
-    title: The Roadmap journey
+    title: The Roadmap Journey
     proposer: "@vanesa_tejada"
     description: ...
   - session_type: session
