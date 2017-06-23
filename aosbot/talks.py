@@ -39,6 +39,7 @@ class Talk:
             "break": "\n".join([
                 f"{get_emoji(self.icon)} {self.from_time:%H:%M} - {self.to_time:%H:%M}",
                 f"*{self.title}*",
+                ""
             ]),
             "extra": "\n".join([
                 f"{get_emoji(self.icon)} {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
@@ -54,7 +55,8 @@ class Talk:
             "session": "\n".join([
                 f"{get_emoji(self.icon)} {self.from_time:%H:%M} - {self.to_time:%H:%M} _{self.room}_",
                 f"*{self.title}*",
-                f"Propuesta por: {self.proposer}"
+                f"Propuesta por: {self.proposer}",
+                ""
             ]),
         }
 
