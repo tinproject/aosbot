@@ -21,11 +21,25 @@ emoji = {
     "orange_book": b"\xF0\x9F\x93\x99",
     "notebook": b"\xF0\x9F\x93\x93",
     "space_invader": b"",
+    "cookie": b"\xF0\x9F\x8D\xAA",
+
+    "thinking": b"	\xF0\x9F\x93\x98",
+    "deiser": b"\xF0\x9F\x93\x93",
+    "ust_global": b"\xF0\x9F\x93\x95",
+    "jeronimo_palacios": b"\xF0\x9F\x93\x99",
+    "agile_spain": b"\xF0\x9F\x93\x97",
+    "agile_torrezno": b"\xF0\x9F\x93\x92",
 }
 
 
 # Talk types: session, general, break, extra
-# Session rooms: TODO
+# Session rooms:
+# Thinking with you
+# Deiser
+# UST Global
+# Jerónimo Palacios
+# Agile Spain
+# Agile Torrezno
 
 
 def get_emoji(emoji_name):
@@ -64,7 +78,7 @@ talks:
     room: Campus María Zambrano
     icon: ghost
     title: AOS Code Jam
-    proposer: José Dova y Agustín Herranz
+    proposer: José Doval y Agustín Herranz
     description: |
         Sesión abierta sobre programación en la que practicar, plantear dudas, enseñar código, debatir... 
         podrás traer tu portátil para trabajar sobre código y aprender un montón de cosas..
@@ -94,10 +108,19 @@ talks:
 
 # Sábado 24
 
+  - session_type: break
+    from_time: "2017-06-24T08:45:00+0200"
+    to_time: "2017-06-24T09:00:00+0200"
+    room: Ágora
+    icon: cookie
+    title: Desayuno
+    proposer: AOS
+    description:
+
   - session_type: general
     from_time: "2017-06-24T09:00:00+0200"
     to_time: "2017-06-24T10:00:00+0200"
-    room: 
+    room: Ágora
     icon: raising_hand
     title: Apertura de las sesiones
     proposer: AOS
@@ -106,19 +129,99 @@ talks:
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
     to_time: "2017-06-24T11:00:00+0200"
-    room: room
-    icon: calendar
-    title: Session I
-    proposer: AOS
+    room: Thinking with you
+    icon: thinking
+    title: Empresas de servicios ¿Qué vedemos en un proyecto Agile?
+    proposer: Sergio Fernández
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T10:00:00+0200"
+    to_time: "2017-06-24T11:00:00+0200"
+    room: Deiser
+    icon: deiser
+    title: Equipos multidisciplinares vs. departamentos.
+    proposer: Jordi Gómez
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T10:00:00+0200"
+    to_time: "2017-06-24T11:00:00+0200"
+    room: UST Global
+    icon: ust_global
+    title: La interminable historia de las priorizaciones
+    proposer: "@rquel_leroes y @ josep_ruidavets"
+    description: 
+  - session_type: session
+    from_time: "2017-06-24T10:00:00+0200"
+    to_time: "2017-06-24T11:00:00+0200"
+    room: Jerónimo Palacios
+    icon: jeronimo_palacios
+    title: Devops! ¿Cómo lo lleváis?
+    proposer: "@leadmurillo"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T10:00:00+0200"
+    to_time: "2017-06-24T11:00:00+0200"
+    room: Agile Spain
+    icon: agile_spain
+    title: Parallel Change (Como hacer cambios grandes en pasos pequeños)
+    proposer: "@eferro"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T10:00:00+0200"
+    to_time: "2017-06-24T11:00:00+0200"
+    room: Agile Torrezno
+    icon: agile_torrezno
+    title: "#NoEstimates ¿Cómo medir \\"velocidad\\"/rendimiento?"
+    proposer: Guillermo Rocha
     description: ...
 
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
-    room: room
-    icon: calendar
-    title: Session II
-    proposer: AOS
+    room: Thinking with you
+    icon: thinking
+    title: "#MakeMeHappyatWork"
+    proposer: "Susana Morcuende @yosoytumadre"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T11:00:00+0200"
+    to_time: "2017-06-24T12:00:00+0200"
+    room: Deiser
+    icon: deiser
+    title: Como combatir el efecto Pokémon.
+    proposer: "Javier Martínex @lasdelpulpo"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T11:00:00+0200"
+    to_time: "2017-06-24T12:00:00+0200"
+    room: UST Global
+    icon: ust_global
+    title: ¡ARGOS! Creando un universo de productos.
+    proposer: Alberto Serrano
+    description: 
+  - session_type: session
+    from_time: "2017-06-24T11:00:00+0200"
+    to_time: "2017-06-24T12:00:00+0200"
+    room: Jerónimo Palacios
+    icon: jeronimo_palacios
+    title: De JP a P.O. (Del látigo al Postit)
+    proposer: Jose Ángel Gómez
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T11:00:00+0200"
+    to_time: "2017-06-24T12:00:00+0200"
+    room: Agile Spain
+    icon: agile_spain
+    title: The Roadmap journey
+    proposer: "@vanesa_tejada"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T11:00:00+0200"
+    to_time: "2017-06-24T12:00:00+0200"
+    room: Agile Torrezno
+    icon: agile_torrezno
+    title: ¿En que consiste exactamente el Mindset Agile?
+    proposer: "@MaicaTrinidad"
     description: ...
 
   - session_type: break
