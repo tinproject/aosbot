@@ -236,19 +236,91 @@ talks:
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
     to_time: "2017-06-24T13:30:00+0200"
-    room: room
-    icon: calendar
-    title: Session III
-    proposer: AOS
+    room: Thinking with you
+    icon: thinking
+    title: "\\"The 3 4 Amigos\\" Fishbowl o Lean Coffee"
+    proposer: @Gastonvalle
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T12:30:00+0200"
+    to_time: "2017-06-24T13:30:00+0200"
+    room: Deiser
+    icon: deiser
+    title: Agile fuera de I.T.
+    proposer: Juan Carlos Sánchez
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T12:30:00+0200"
+    to_time: "2017-06-24T13:30:00+0200"
+    room: UST Global
+    icon: ust_global
+    title: Comunicación No Violenta, Más allá del método
+    proposer: Francisco Javier García Orduña
+    description: 
+  - session_type: session
+    from_time: "2017-06-24T12:30:00+0200"
+    to_time: "2017-06-24T13:30:00+0200"
+    room: Jerónimo Palacios
+    icon: jeronimo_palacios
+    title: Remotamente Ágiles
+    proposer: @merybere
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T12:30:00+0200"
+    to_time: "2017-06-24T13:30:00+0200"
+    room: Agile Spain
+    icon: agile_spain
+    title: Facilitación Gráfica en el mundo #agile
+    proposer: "Janire Paskua y Bea Zarzo"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T12:30:00+0200"
+    to_time: "2017-06-24T14:30:00+0200"
+    room: Agile Torrezno
+    icon: agile_torrezno
+    title: "Competencias en equipo scrum en entorno de escalado"
+    proposer: "Juanma Gomez y Edu Cabrera"
     description: ...
 
   - session_type: session
     from_time: "2017-06-24T13:30:00+0200"
     to_time: "2017-06-24T14:30:00+0200"
-    room: room
-    icon: calendar
-    title: Session IV
-    proposer: AOS
+    room: Thinking with you
+    icon: thinking
+    title: "Agile en la Administración Pública"
+    proposer: "Gertru"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T13:30:00+0200"
+    to_time: "2017-06-24T14:30:00+0200"
+    room: Deiser
+    icon: deiser
+    title: Sobreviviendo al sprint review
+    proposer: "Vicente Amorós"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T13:30:00+0200"
+    to_time: "2017-06-24T14:30:00+0200"
+    room: UST Global
+    icon: ust_global
+    title: "Agile Universities"
+    proposer: "@nhpatt"
+    description: 
+  - session_type: session
+    from_time: "2017-06-24T13:30:00+0200"
+    to_time: "2017-06-24T14:30:00+0200"
+    room: Jerónimo Palacios
+    icon: jeronimo_palacios
+    title: Gestión de conflictos
+    proposer: Diego Rojas
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T13:30:00+0200"
+    to_time: "2017-06-24T14:30:00+0200"
+    room: Agile Spain
+    icon: agile_spain
+    title: Disciplina positiva y Agile Kids
+    proposer: "@aquiestathai y @pedroserranot"
     description: ...
 
   - session_type: break
@@ -263,19 +335,99 @@ talks:
   - session_type: session
     from_time: "2017-06-24T16:00:00+0200"
     to_time: "2017-06-24T17:00:00+0200"
-    room: room
-    icon: calendar
-    title: Session V
-    proposer: AOS
+    room: Thinking with you
+    icon: thinking
+    title: "Mindfulness y Agile"
+    proposer: "Marta San Martin"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T16:00:00+0200"
+    to_time: "2017-06-24T17:00:00+0200"
+    room: Deiser
+    icon: deiser
+    title: Refinando el refinamiento
+    proposer: "Gabi Salamanca"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T16:00:00+0200"
+    to_time: "2017-06-24T17:00:00+0200"
+    room: UST Global
+    icon: ust_global
+    title: Design Thinking para crear dinámicas
+    proposer: Roberto A, Roberto Cruz, David Fernandez, David Jimenez
+    description: 
+  - session_type: session
+    from_time: "2017-06-24T16:00:00+0200"
+    to_time: "2017-06-24T17:00:00+0200"
+    room: Jerónimo Palacios
+    icon: jeronimo_palacios
+    title: Scrum en el Aula (Otra alternativa)
+    proposer: Marisa
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T16:00:00+0200"
+    to_time: "2017-06-24T17:00:00+0200"
+    room: Agile Spain
+    icon: agile_spain
+    title: Kanban, ¡No me salen las cuentas!
+    proposer: "Laura Portilla"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T16:00:00+0200"
+    to_time: "2017-06-24T17:00:00+0200"
+    room: Agile Torrezno
+    icon: agile_torrezno
+    title: Slow
+    proposer: "@WalletThomas"
     description: ...
 
   - session_type: session
     from_time: "2017-06-24T17:00:00+0200"
     to_time: "2017-06-24T18:00:00+0200"
-    room: room
-    icon: calendar
-    title: Session VI
-    proposer: AOS
+    room: Thinking with you
+    icon: thinking
+    title: "Estamos ganando la batalla del cambio cultural cuando \\"recursos humanos\\" se hace cargo de la \\"oficina agile\\""
+    proposer: "Gerardo Ponte"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T17:00:00+0200"
+    to_time: "2017-06-24T18:00:00+0200"
+    room: Deiser
+    icon: deiser
+    title: Construyendo productos con Nexus framework
+    proposer: "@unairoldan"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T17:00:00+0200"
+    to_time: "2017-06-24T18:00:00+0200"
+    room: UST Global
+    icon: ust_global
+    title: Impros Ágiles
+    proposer: "@lasdelpulpo y @merybene"
+    description: 
+  - session_type: session
+    from_time: "2017-06-24T17:00:00+0200"
+    to_time: "2017-06-24T18:00:00+0200"
+    room: Jerónimo Palacios
+    icon: jeronimo_palacios
+    title: Comunidades de aprendizaje en la empresa
+    proposer: "Modesto San Juan @msanjuan"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T17:00:00+0200"
+    to_time: "2017-06-24T18:00:00+0200"
+    room: Agile Spain
+    icon: agile_spain
+    title: Kanban, Autoexigencia de los equipos, ¿Se trabaja?
+    proposer: "Aritz Suescun @artzis"
+    description: ...
+  - session_type: session
+    from_time: "2017-06-24T17:00:00+0200"
+    to_time: "2017-06-24T18:00:00+0200"
+    room: Agile Torrezno
+    icon: agile_torrezno
+    title: "Matar al unicornio (mesa redonda)"
+    proposer: "Miriam orejana, Sara de Pablos y Rubén Plaza"
     description: ...
 
   - session_type: general
