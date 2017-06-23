@@ -239,7 +239,7 @@ talks:
     room: Thinking with you
     icon: thinking
     title: "\\"The 3 4 Amigos\\" Fishbowl o Lean Coffee"
-    proposer: @Gastonvalle
+    proposer: "@Gastonvalle"
     description: ...
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
@@ -263,7 +263,7 @@ talks:
     room: Jerónimo Palacios
     icon: jeronimo_palacios
     title: Remotamente Ágiles
-    proposer: @merybere
+    proposer: "@merybere"
     description: ...
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
