@@ -171,7 +171,7 @@ talks:
     to_time: "2017-06-24T11:00:00+0200"
     room: Agile Torrezno
     icon: agile_torrezno
-    title: "#NoEstimates ¿Cómo medir \\"velocidad\\"/rendimiento?"
+    title: "#NoEstimates ¿Cómo medir \"velocidad\"/rendimiento?"
     proposer: Guillermo Rocha
     description: ...
 
@@ -238,7 +238,7 @@ talks:
     to_time: "2017-06-24T13:30:00+0200"
     room: Thinking with you
     icon: thinking
-    title: "\\"The 3 4 Amigos\\" Fishbowl o Lean Coffee"
+    title: "\"The 3 4 Amigos\" Fishbowl o Lean Coffee"
     proposer: "@Gastonvalle"
     description: ...
   - session_type: session
@@ -386,7 +386,7 @@ talks:
     to_time: "2017-06-24T18:00:00+0200"
     room: Thinking with you
     icon: thinking
-    title: "Estamos ganando la batalla del cambio cultural cuando \\"recursos humanos\\" se hace cargo de la \\"oficina agile\\""
+    title: "Estamos ganando la batalla del cambio cultural cuando \"recursos humanos\" se hace cargo de la \"oficina agile\""
     proposer: "Gerardo Ponte"
     description: ...
   - session_type: session
