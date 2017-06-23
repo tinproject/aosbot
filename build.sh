@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+set -e
+source venv/bin/activate
+flake8
+pytest
+
 rm -rf ./build
 mkdir -p ./build
 pip install . -t ./build
