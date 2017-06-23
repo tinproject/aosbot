@@ -53,8 +53,8 @@ talks:
   # - session_type: session
   #   from_time: "2017-06-24T09:00:00+0200"
   #   to_time: "2017-06-24T10:00:00+0200"
-  #   room: 
-  #   icon: 
+  #   room:
+  #   icon:
   #   title:
   #   proposer:
   #   description:
@@ -69,7 +69,7 @@ talks:
     title: Let's Play Agile Games
     proposer: Amalia Hernández y Delia Estebaranz
     description: |
-        Juegos acerca de la formación de equipos y la confianza. 
+        Juegos acerca de la formación de equipos y la confianza
         Apto para todo tipo de públicos.
 
   - session_type: extra
@@ -80,7 +80,7 @@ talks:
     title: AOS Code Jam
     proposer: José Doval y Agustín Herranz
     description: |
-        Sesión abierta sobre programación en la que practicar, plantear dudas, enseñar código, debatir... 
+        Sesión abierta sobre programación en la que practicar, plantear dudas, enseñar código, debatir...
         podrás traer tu portátil para trabajar sobre código y aprender un montón de cosas..
 
   - session_type: general
@@ -99,7 +99,7 @@ talks:
     to_time: "2017-06-23T19:30:00+0200"
     room: Campus María Zambrano
     icon: raising_hand
-    title: Creación del panel y votación de las sesiones.
+    title: Creación del panel y votación de las sesiones
     proposer: AOS
     description: |
         Las personas que lo deseen proponen una sesión o un tema del que hablar explicando brevemente el contenido y enfoque de la sesión.
@@ -149,7 +149,7 @@ talks:
     icon: ust_global
     title: La interminable historia de las priorizaciones
     proposer: "@rquel_lerones y @josep_riudavets"
-    description: 
+    description:
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
     to_time: "2017-06-24T11:00:00+0200"
@@ -163,7 +163,7 @@ talks:
     to_time: "2017-06-24T11:00:00+0200"
     room: Agile Spain
     icon: agile_spain
-    title: Parallel Change (Cómo hacer cambios grandes en pasos pequeños)
+    title: "Parallel Change (Cómo hacer cambios grandes en pasos pequeños)"
     proposer: "@eferro"
     description: ...
   - session_type: session
@@ -198,7 +198,7 @@ talks:
     icon: ust_global
     title: Después de Nexus, Less, SAFE... ¡ARGOS! Creando un universo de productos
     proposer: Alberto Serrano
-    description: 
+    description:
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
@@ -256,7 +256,7 @@ talks:
     icon: ust_global
     title: Comunicación No Violenta, Más allá del método
     proposer: Francisco Javier García Orduña
-    description: 
+    description:
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
     to_time: "2017-06-24T13:30:00+0200"
@@ -305,7 +305,7 @@ talks:
     icon: ust_global
     title: "Agile Universities"
     proposer: "@nhpatt"
-    description: 
+    description:
   - session_type: session
     from_time: "2017-06-24T13:30:00+0200"
     to_time: "2017-06-24T14:30:00+0200"
@@ -355,7 +355,7 @@ talks:
     icon: ust_global
     title: Design Thinking para crear dinámicas
     proposer: Roberto A, Roberto Cruz, David Fernandez, David Jimenez
-    description: 
+    description:
   - session_type: session
     from_time: "2017-06-24T16:00:00+0200"
     to_time: "2017-06-24T17:00:00+0200"
@@ -404,7 +404,7 @@ talks:
     icon: ust_global
     title: Impros Ágiles
     proposer: "@lasdelpulpo y @merybene"
-    description: 
+    description:
   - session_type: session
     from_time: "2017-06-24T17:00:00+0200"
     to_time: "2017-06-24T18:00:00+0200"
@@ -433,7 +433,7 @@ talks:
   - session_type: general
     from_time: "2017-06-24T18:00:00+0200"
     to_time: "2017-06-24T19:00:00+0200"
-    room: 
+    room:
     icon: raising_hand
     title: Retrospectiva y cierre AOS 2017
     proposer: AOS
