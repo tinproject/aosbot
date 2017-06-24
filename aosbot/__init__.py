@@ -1,6 +1,7 @@
 import datetime as dt
 import logging
 import re
+import requests
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -163,3 +164,14 @@ def telegram_webhook_handler(event: dict, context: dict) -> dict:
 
 def send_message_to_conference_group(event, context):
     pass
+
+
+def set_webhook(event, context):
+    logger.info("REQUEST: %s", event)
+    payload = {
+        "url": f"{config.WEBHOOK_URL}",
+    }
+    response = requests.post(f"https://api.telegram.org/bot{config.BOT_API_TOKEN}/setWebhook",
+                             json=payload)  # Type: requests.Response
+    logger.info("RESPONSE: %s", response.text)
+    return response.text
