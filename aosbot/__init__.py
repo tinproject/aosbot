@@ -71,7 +71,7 @@ def command_handler_help(Message):
 
 def command_handler_ahora(Message):
     now = dt.datetime.now(dt.timezone.utc)
-    talks = talk_manager.get_now_talks(now)
+    talks = talk_manager.get_now(now)
     if talks:
         response = "\n".join((str(t) for t in talks))
     else:

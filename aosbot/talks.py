@@ -67,8 +67,11 @@ class TalkManager:
     def __init__(self, talks_data):
         self.talks = [Talk(**t) for t in talks_data["talks"]]
 
-    def get_now_talks(self, time):
+    def get_now(self, time):
         return [t for t in self.talks if t.is_now(time)]
+
+    def get_now_talks(self, time):
+        return [t for t in self.talks if t.is_now(time) and t.is_talk()]
 
     def get_next_talks(self, time):
         return [t for t in self.talks if t.is_upcoming(time) and t.is_talk()]
