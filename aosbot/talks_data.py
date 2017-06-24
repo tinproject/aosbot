@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import yaml
 
 
@@ -115,7 +116,7 @@ talks:
     icon: cookie
     title: Desayuno
     proposer: AOS
-    description:
+    description: "..."
 
   - session_type: general
     from_time: "2017-06-24T09:00:00+0200"
@@ -124,30 +125,30 @@ talks:
     icon: raising_hand
     title: Apertura de las sesiones
     proposer: AOS
-    description:
+    description: "Presentación y apertura del AOS 2017"
 
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
     to_time: "2017-06-24T11:00:00+0200"
     room: Thinking with you
     icon: thinking
-    title: Empresas de servicios, ¿Qué vendemos en un proyecto Agile?
-    proposer: Sergio Fernández
-    description: ...
+    title: "Empresas de servicios, ¿Qué vendemos en un proyecto Agile?"
+    proposer: "Sergio Fernández"
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
     to_time: "2017-06-24T11:00:00+0200"
     room: Deiser
     icon: deiser
-    title: Equipos multidisciplinares vs. departamentos
-    proposer: Jordi Gómez
-    description: ...
+    title: "Equipos multidisciplinares vs. departamentos"
+    proposer: "Jordi Gómez"
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
     to_time: "2017-06-24T11:00:00+0200"
     room: UST Global
     icon: ust_global
-    title: La interminable historia de las priorizaciones
+    title: "La interminable historia de las priorizaciones"
     proposer: "@rquel_lerones y @josep_riudavets"
     description:
   - session_type: session
@@ -157,7 +158,7 @@ talks:
     icon: jeronimo_palacios
     title: Devops! ¿Cómo lo lleváis?
     proposer: "@leodmurillo"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
     to_time: "2017-06-24T11:00:00+0200"
@@ -165,64 +166,64 @@ talks:
     icon: agile_spain
     title: "Parallel Change (Cómo hacer cambios grandes en pasos pequeños)"
     proposer: "@eferro"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T10:00:00+0200"
     to_time: "2017-06-24T11:00:00+0200"
     room: Agile Torrezno
     icon: agile_torrezno
-    title: "#NoEstimates ¿Cómo medir \"velocidad\"/rendimiento?"
+    title: "NoEstimates ¿Cómo medir velocidad/rendimiento?"
     proposer: Guillermo Rocha
-    description: ...
+    description: "..."
 
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
     room: Thinking with you
     icon: thinking
-    title: "#MakeMeHappyAtWork"
+    title: "MakeMeHappyAtWork"
     proposer: "Susana Morcuende @yosoytumadre"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
     room: Deiser
     icon: deiser
-    title: Como combatir el efecto Pokémon.
+    title: "Como combatir el efecto Pokémon."
     proposer: "Javier Martínez @lasdelpulpo"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
     room: UST Global
     icon: ust_global
-    title: Después de Nexus, Less, SAFE... ¡ARGOS! Creando un universo de productos
-    proposer: Alberto Serrano
-    description:
+    title: "Después de Nexus, Less, SAFE... ¡ARGOS! Creando un universo de productos"
+    proposer: "Alberto Serrano"
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
     room: Jerónimo Palacios
     icon: jeronimo_palacios
-    title: De JP a P.O. (Del látigo al Postit)
-    proposer: Jose Ángel Gómez
-    description: ...
+    title: "De JP a P.O. (Del látigo al Postit)"
+    proposer: "Jose Ángel Gómez"
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
     room: Agile Spain
     icon: agile_spain
-    title: The Roadmap Journey
+    title: "The Roadmap Journey"
     proposer: "@vanesa_tejada"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T11:00:00+0200"
     to_time: "2017-06-24T12:00:00+0200"
     room: Agile Torrezno
     icon: agile_torrezno
-    title: ¿En que consiste exactamente el Mindset Agile?
+    title: "¿En que consiste exactamente el Mindset Agile?"
     proposer: "@MaicaTrinidad"
-    description: ...
+    description: "..."
 
   - session_type: break
     from_time: "2017-06-24T12:00:00+0200"
@@ -231,48 +232,48 @@ talks:
     icon: fork_and_knife
     title: Coffe break
     proposer: AOS
-    description: ...
+    description: "..."
 
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
     to_time: "2017-06-24T13:30:00+0200"
     room: Thinking with you
     icon: thinking
-    title: "\"The 3 4 Amigos\" Fishbowl o Lean Coffee"
+    title: "'The 3 4 Amigos' Fishbowl o Lean Coffee"
     proposer: "@Gastonvalle"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
     to_time: "2017-06-24T13:30:00+0200"
     room: Deiser
     icon: deiser
-    title: Agile fuera de I.T.
-    proposer: Juan Carlos Sánchez
-    description: ...
+    title: "Agile fuera de I.T."
+    proposer: "Juan Carlos Sánchez"
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
     to_time: "2017-06-24T13:30:00+0200"
     room: UST Global
     icon: ust_global
-    title: Comunicación No Violenta, Más allá del método
-    proposer: Francisco Javier García Orduña
+    title: "Comunicación No Violenta, Más allá del método"
+    proposer: "Francisco Javier García Orduña"
     description:
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
     to_time: "2017-06-24T13:30:00+0200"
     room: Jerónimo Palacios
     icon: jeronimo_palacios
-    title: Remotamente Ágiles
+    title: "Remotamente Ágiles"
     proposer: "@merybere"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
     to_time: "2017-06-24T13:30:00+0200"
     room: Agile Spain
     icon: agile_spain
-    title: Facilitación Gráfica en el mundo #agile
+    title: "Facilitación Gráfica en el mundo agile"
     proposer: "Janire Paskua y Bea Zarzo"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T12:30:00+0200"
     to_time: "2017-06-24T14:30:00+0200"
@@ -280,7 +281,7 @@ talks:
     icon: agile_torrezno
     title: "Competencias en equipo scrum en entorno de escalado"
     proposer: "Juanma Gomez y Edu Cabrera"
-    description: ...
+    description: "..."
 
   - session_type: session
     from_time: "2017-06-24T13:30:00+0200"
@@ -289,15 +290,15 @@ talks:
     icon: thinking
     title: "Agile en la Administración Pública"
     proposer: "Gertru"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T13:30:00+0200"
     to_time: "2017-06-24T14:30:00+0200"
     room: Deiser
     icon: deiser
-    title: Sobreviviendo al sprint review
+    title: "Sobreviviendo al sprint review"
     proposer: "Vicente Amorós"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T13:30:00+0200"
     to_time: "2017-06-24T14:30:00+0200"
@@ -311,17 +312,17 @@ talks:
     to_time: "2017-06-24T14:30:00+0200"
     room: Jerónimo Palacios
     icon: jeronimo_palacios
-    title: Gestión de conflictos
-    proposer: Diego Rojas
-    description: ...
+    title: "Gestión de conflictos"
+    proposer: "Diego Rojas"
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T13:30:00+0200"
     to_time: "2017-06-24T14:30:00+0200"
     room: Agile Spain
     icon: agile_spain
-    title: Disciplina positiva y Agile Kids
+    title: "Disciplina positiva y Agile Kids"
     proposer: "@aquiestathai y @pedroserranot"
-    description: ...
+    description: "..."
 
   - session_type: break
     from_time: "2017-06-24T14:30:00+0200"
@@ -330,7 +331,7 @@ talks:
     icon: fork_and_knife
     title: Comida
     proposer: AOS
-    description: ...
+    description: "..."
 
   - session_type: session
     from_time: "2017-06-24T16:00:00+0200"
@@ -339,64 +340,64 @@ talks:
     icon: thinking
     title: "Mindfulness y Agile"
     proposer: "Marta San Martin"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T16:00:00+0200"
     to_time: "2017-06-24T17:00:00+0200"
     room: Deiser
     icon: deiser
-    title: Refinando el refinamiento
+    title: "Refinando el refinamiento"
     proposer: "Gabi Salamanca"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T16:00:00+0200"
     to_time: "2017-06-24T17:00:00+0200"
     room: UST Global
     icon: ust_global
-    title: Design Thinking para crear dinámicas
-    proposer: Roberto A, Roberto Cruz, David Fernandez, David Jimenez
+    title: "Design Thinking para crear dinámicas"
+    proposer: "Roberto A, Roberto Cruz, David Fernandez, David Jimenez"
     description:
   - session_type: session
     from_time: "2017-06-24T16:00:00+0200"
     to_time: "2017-06-24T17:00:00+0200"
     room: Jerónimo Palacios
     icon: jeronimo_palacios
-    title: Scrum en el Aula (Otra alternativa)
-    proposer: Marisa
-    description: ...
+    title: "Scrum en el Aula (Otra alternativa)"
+    proposer: "Marisa"
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T16:00:00+0200"
     to_time: "2017-06-24T17:00:00+0200"
     room: Agile Spain
     icon: agile_spain
-    title: Kanban, ¡No me salen las cuentas!
+    title: "Kanban, ¡No me salen las cuentas!"
     proposer: "Laura Portilla"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T16:00:00+0200"
     to_time: "2017-06-24T17:00:00+0200"
     room: Agile Torrezno
     icon: agile_torrezno
-    title: Slow
+    title: "Slow"
     proposer: "@WalletThomas"
-    description: ...
+    description: "..."
 
   - session_type: session
     from_time: "2017-06-24T17:00:00+0200"
     to_time: "2017-06-24T18:00:00+0200"
     room: Thinking with you
     icon: thinking
-    title: "Estamos ganando la batalla del cambio cultural cuando \"recursos humanos\" se hace cargo de la \"oficina agile\""
+    title: "Estamos ganando la batalla del cambio cultural cuando 'recursos humanos' se hace cargo de la 'oficina agile'"
     proposer: "Gerardo Ponte"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T17:00:00+0200"
     to_time: "2017-06-24T18:00:00+0200"
     room: Deiser
     icon: deiser
-    title: Construyendo productos con Nexus framework
+    title: "Construyendo productos con Nexus framework"
     proposer: "@unairoldan"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T17:00:00+0200"
     to_time: "2017-06-24T18:00:00+0200"
@@ -410,17 +411,17 @@ talks:
     to_time: "2017-06-24T18:00:00+0200"
     room: Jerónimo Palacios
     icon: jeronimo_palacios
-    title: Comunidades de aprendizaje en la empresa
+    title: "Comunidades de aprendizaje en la empresa"
     proposer: "Modesto San Juan @msanjuan"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T17:00:00+0200"
     to_time: "2017-06-24T18:00:00+0200"
     room: Agile Spain
     icon: agile_spain
-    title: Kanban, Autoexigencia de los equipos, ¿Se trabaja?
+    title: "Kanban, Autoexigencia de los equipos, ¿Se trabaja?"
     proposer: "Aritz Suescun @artzis"
-    description: ...
+    description: "..."
   - session_type: session
     from_time: "2017-06-24T17:00:00+0200"
     to_time: "2017-06-24T18:00:00+0200"
@@ -428,15 +429,15 @@ talks:
     icon: agile_torrezno
     title: "Matar al unicornio (mesa redonda)"
     proposer: "Miriam orejana, Sara de Pablos y Rubén Plaza"
-    description: ...
+    description: "..."
 
   - session_type: general
     from_time: "2017-06-24T18:00:00+0200"
     to_time: "2017-06-24T19:00:00+0200"
-    room:
+    room: Ágora
     icon: raising_hand
-    title: Retrospectiva y cierre AOS 2017
+    title: "Retrospectiva y cierre AOS 2017"
     proposer: AOS
-    description:
+    description: "¡Eso es todo amigas/os!"
 
 """)  # NoQA E501, W291
